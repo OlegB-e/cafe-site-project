@@ -1,6 +1,6 @@
 /* Стили для главной страницы */
 .home-container {
-    background-image: url('/images/cafe.jpg');  /* Путь к изображению */
+    background-image: url('../images/cafe.jpg');  /* Путь к изображению */
     background-size: cover;  /* Масштабирует изображение, чтобы оно покрывало всю доступную область */
     background-position: center center;  /* Центрирует изображение */
     background-repeat: no-repeat;  /* Отключает повторение фона */
