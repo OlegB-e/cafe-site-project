@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
-import DishDetail from "./pages/DishDetail"; // Импорт нового компонента для деталей блюда
+import DishDetail from "./pages/DishDetail"; 
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -49,9 +49,9 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home addToCart={addToCart} />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/catalog" element={<Catalog addToCart={addToCart} />} />
-        {/* Новый маршрут для отображения деталей блюда */}
         <Route path="/catalog/:id" element={<DishDetail addToCart={addToCart} />} />
         <Route
           path="/cart"
