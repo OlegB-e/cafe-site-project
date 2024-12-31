@@ -49,7 +49,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/catalog" element={<Catalog addToCart={addToCart} />} />
         <Route path="/catalog/:id" element={<DishDetail addToCart={addToCart} />} />
